@@ -1,23 +1,42 @@
-# PROJECT TITLE
-SHORT ONE-SENTENCE DESCRIPTION OF WHAT THE PROJECT DOES.
+# String Repeating Function
+This is a function that repeats a given string a specific number of times.
 
-## Assignment
-* What was the assignment?
+## User Stories
+* You should create a function named repeatStringNumTimes that takes two parameters: a string and a number.
+* The function should return the string repeated the specified number of times.
+* If the number is less than or equal to zero, the function should return an empty string.
 
 ## Tools & Languages Used
-* What stuff did you use?
+* FreeCodeCamp.org
+* JavaScript
 
 ## Features
-* Place features here
+* Function takes two parameters: a string and a number.
+* Function returns the string repeated the specified number of times.
+* Function returns an empty string if number provided is less than or equal to zero.
 
 ## Concepts Learned
-* What concepts did you learn?
+* Accumulators
+* Control flow order
+* Early exits in loops
+* Concatenation
 
 ## Examples
 ```
-JavaScript
+function repeatStringNumTimes(string, number) {
+  let result = "";
 
-PLACE CODE HERE
+  if (number <= 0) {
+    return "";
+  } 
+  for (let i = 0; i < number; i++) {
+    result += string;
+  }
+  return result;
+}
+
+console.log(repeatStringNumTimes("abc", 3));
+//This will return "abcabcabc"
 
 ```
 
